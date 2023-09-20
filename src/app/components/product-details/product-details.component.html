@@ -1,0 +1,26 @@
+<div class="container">
+  <mat-card class="example-card">
+    <mat-card-title
+      ><b>{{ product.title }}</b></mat-card-title
+    >
+    <img class="image" mat-card-image src="{{ product.image }}" />
+    <mat-card-content>
+      <p>Cena: {{ product.price | currency : "PLN " }}</p>
+      <p>Rok produkcji: {{ product.year }}</p>
+      <p>Procesor: {{ product.configure.chip }}</p>
+      <p>SSD: {{ product.configure.SSD }}</p>
+      <p>Display: {{ product.configure.display }}</p>
+      <p>Pamięć: {{ product.configure.memory }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        class="button"
+        mat-flat-button
+        color="primary"
+        (click)="addToBasket(product)"
+      >
+        WŁÓŻ DO TORBY!
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

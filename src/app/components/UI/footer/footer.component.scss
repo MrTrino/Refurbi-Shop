@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items:flex-start;
+  height: 50px;
+  min-height: 50px;
+  flex-direction: column;
+  font-size: 10px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(163, 150, 142, 0.817);
+
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}

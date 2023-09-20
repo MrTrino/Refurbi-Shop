@@ -1,0 +1,40 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+
+.toolbar {
+  display: flex;
+  align-items: center;
+
+
+  &.button {
+    margin-left: 5px;
+    background-color: rgba(163, 150, 142, 0);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.no-select {
+  cursor: pointer;
+  user-select: none;
+}
+
+.header {
+  background-color: rgba(163, 150, 142, 0.817);
+  height: 60px;
+  min-height: 60px;
+  line-height: 19px;
+}
+
+.subtitle {
+  display: block;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.828);
+}
+
