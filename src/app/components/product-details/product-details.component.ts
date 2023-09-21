@@ -12,16 +12,16 @@ import { ProductsService } from './../../services/products.service';
 })
 export class ProductDetailsComponent implements OnInit {
 
-  product: IProducts;
-  productSubscription: Subscription;
+  product!: IProducts;
+  productSubscription!: Subscription;
 
     constructor(private ProductsService: ProductsService, private route: ActivatedRoute) { }
 
-    products: IProducts[];
-    productsSubscription: Subscription;
+    products!: IProducts[];
+    productsSubscription!: Subscription;
 
-    basket: IProducts[];
-    basketSubscription: Subscription;
+    basket!: IProducts[];
+    basketSubscription!: Subscription;
 
   ngOnInit(): void {
     this.productSubscription = this.route.data.subscribe((data) => {

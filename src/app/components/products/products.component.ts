@@ -11,11 +11,11 @@ import { Subscription } from 'rxjs';
 export class ProductsComponent implements OnInit {
 
   constructor(private ProductsService: ProductsService) { }
-  products: IProducts[];
-  productsSubscription: Subscription;
+  products!: IProducts[];
+  productsSubscription!: Subscription;
 
-  basket: IProducts[];
-  basketSubscription: Subscription;
+  basket!: IProducts[];
+  basketSubscription!: Subscription;
 
   canEdit: boolean = false;
   canView: boolean = false;
