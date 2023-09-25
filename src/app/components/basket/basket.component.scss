@@ -3,20 +3,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  line-height: 1;
+  flex-wrap: wrap;
 }
 
 .example-card {
 background-color: white;
 color: black;
-margin-right: 10px;
-margin-top: 10px;
+margin-right: 4px;
+margin-left: 2px;
+margin-top: 20px;
 align-items: center;
+width: 250px;
 }
 
 .button {
-  margin-right: 20px;
-  margin-left: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 8px;
   background-color: rgba(163, 150, 142, 0.51);
   color: rgb(0, 0, 0);
   max-height: 30px;
@@ -24,9 +29,11 @@ align-items: center;
 }
 
 .image {
-  max-width: 300px;
+  max-width: 230px;
 }
 
 .subtitle {
-  margin-top: 13px;
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: bold;
 }

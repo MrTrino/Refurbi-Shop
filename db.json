@@ -1,0 +1,91 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Macbook Air",
+      "condition": "Refurbished",
+      "price": 5699,
+      "year": "June 2021",
+      "image": "assets/images/refurb-macbook-air-m2-spacegray-202208.jpg",
+      "configure": {
+        "chip": "M1",
+        "SSD": "256 GB",
+        "memory": "8 GB unified memory",
+        "display": "Retina"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Macbook Air",
+      "condition": "Refurbished",
+      "price": 8999,
+      "year": "October 2022",
+      "image": "assets/images/refurb-macbook-air-m2-spacegray-202208.jpg",
+      "configure": {
+        "chip": "M1",
+        "SSD": "512 GB",
+        "memory": "16 GB unified memory",
+        "display": "Retina"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Macbook Air",
+      "condition": "Refurbished",
+      "price": 6999,
+      "year": "March 2022",
+      "image": "assets/images/refurb-macbook-air-m2-spacegray-202208.jpg",
+      "configure": {
+        "chip": "M1",
+        "SSD": "256 GB",
+        "memory": "16 GB unified memory",
+        "display": "Retina"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Macbook Air",
+      "condition": "Refurbished",
+      "price": 4899,
+      "year": "January 2021",
+      "image": "assets/images/refurb-macbook-air-m2-spacegray-202208.jpg",
+      "configure": {
+        "chip": "M1",
+        "SSD": "256 GB",
+        "memory": "16 GB unified memory",
+        "display": "Retina"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Macbook Air",
+      "condition": "Refurbished",
+      "price": 7499,
+      "year": "September 2022",
+      "image": "assets/images/refurb-macbook-air-m2-spacegray-202208.jpg",
+      "configure": {
+        "chip": "M1",
+        "SSD": "256 GB",
+        "memory": "8 GB unified memory",
+        "display": "Retina"
+      }
+    }
+  ],
+  "basket": [
+    {
+      "id": 3,
+      "title": "Macbook Air",
+      "condition": "Refurbished",
+      "price": 6999,
+      "year": "March 2022",
+      "image": "assets/images/refurb-macbook-air-m2-spacegray-202208.jpg",
+      "configure": {
+        "chip": "M1",
+        "SSD": "256 GB",
+        "memory": "16 GB unified memory",
+        "display": "Retina"
+      },
+      "quantity": 1
+    }
+  ]
+}

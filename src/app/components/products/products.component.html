@@ -1,14 +1,16 @@
 <div class="container">
   <mat-card class="example-card" *ngFor="let product of products">
     <mat-card-title class="mat-card-title"
-      ><b>{{ product.title }}</b></mat-card-title
-    >
+      ><b>{{ product.title }}</b
+      ><br />
+    </mat-card-title>
     <img class="image" mat-card-image src="{{ product.image }}" />
     <mat-card-content class="mat-card-content">
-      <p>Cena: {{ product.price | currency : "PLN " }}</p>
-      <p>Rok produkcji: {{ product.year }}</p>
+      <p>Condition: {{ product.condition }}</p>
+      <p>Price: {{ product.price | currency : "PLN " }}</p>
+      <p>Released: {{ product.year }}</p>
     </mat-card-content>
-    <mat-card-actions class="mat-card-actions">
+    <mat-card-actions class="mat-card-actions" style="margin-top: 15px">
       <button
         class="button"
         mat-flat-button
@@ -16,15 +18,17 @@
         (click)="addToBasket(product)"
         type="button"
       >
-        DO TORBY
-      </button>
-      <button
+        ADD TO BAG
+      </button></mat-card-actions
+    >
+    <mat-card-actions class="mat-card-actions"
+      ><button
         class="button"
         mat-flat-button
         color="primary"
         [routerLink]="['/product', product.id]"
       >
-        PARAMETRY
+        OVERVIEW
       </button>
     </mat-card-actions>
   </mat-card>

@@ -1,6 +1,7 @@
 export interface IProducts {
   id: number,
   title: string,
+  condition: string,
   price: number,
   year: string,
   image?: string,
