@@ -71,21 +71,5 @@
       }
     }
   ],
-  "basket": [
-    {
-      "id": 3,
-      "title": "Macbook Air",
-      "condition": "Refurbished",
-      "price": 6999,
-      "year": "March 2022",
-      "image": "assets/images/refurb-macbook-air-m2-spacegray-202208.jpg",
-      "configure": {
-        "chip": "M1",
-        "SSD": "256 GB",
-        "memory": "16 GB unified memory",
-        "display": "Retina"
-      },
-      "quantity": 1
-    }
-  ]
+  "basket": []
 }
