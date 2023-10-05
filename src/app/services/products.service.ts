@@ -1,14 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs';
+import { map } from 'rxjs'; // @TODO nieuzywane
 import { IProducts } from './../models/products';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
-
-  url: string = 'http://localhost:3000/products';
+  // @TODO niejednoznaczna nazwa 'url' - zmien na urlProducts (jak przy urlBasket)
+  // najlepiej przy pomocy rename symbol (F2), podmieni kazde wystapienie
+  url: string = 'http://localhost:3000/products'; 
   urlBasket: string = 'http://localhost:3000/basket';
 
   constructor(private http: HttpClient) { }
@@ -35,6 +36,7 @@ export class ProductsService {
 
 
   deleteProductFromBasket(id: number) {
+    // @TODO usuwasz produkt, wiec poprawne bedzie delete<IProducts>
     return this.http.delete<any>(`${this.urlBasket}/${id}`);
   }
 }

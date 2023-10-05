@@ -17,10 +17,13 @@ export class ProductsComponent implements OnInit {
   basket!: IProducts[];
   basketSubscription!: Subscription;
 
+  // @TODO mozna usunac oznaczenie typu - TS wywnioskuje boolean na podstawie wartosci "false"
   canEdit: boolean = false;
   canView: boolean = false;
 
   ngOnInit(): void {
+    // @TODO tu nie rozumiem - domyslnie canEdit jest false, w ngOnInit zmienia się na true.
+    // Po co taki zabieg?
     this.canEdit = true;
 
     this.productsSubscription = this.ProductsService.getProducts().subscribe((data) => {
@@ -32,6 +35,8 @@ export class ProductsComponent implements OnInit {
     });
   }
   addToBasket(product: IProducts) {
+    // @TODO komponent ma ten sam kod, co product-details 
+    // warto wyodrebnic wspolne czesci do zewnetrznego serwisu, z którego oba komponenty będą korzystać
     product.quantity = 1;
     let findItem;
 

@@ -11,10 +11,12 @@ import { Component, OnInit } from '@angular/core';
 export class BasketComponent implements OnInit {
   constructor(private ProductsService: ProductsService) { }
 
+  // @TODO po co definite assignment assertion?
   basket!: IProducts[];
   basketSubscription!: Subscription;
 
   ngOnInit(): void {
+    // @TODO uzyj async pipe zamiast jawnej subskrypcji
     this.basketSubscription = this.ProductsService.getProductFromBasket().subscribe((data) => {
       this.basket = data;
     });
@@ -25,6 +27,14 @@ export class BasketComponent implements OnInit {
   }
 
   minusItemFromBasket(item: IProducts) {
+    /* @TODO dla czytelnosci wydziel metode deleteProduct()
+     * if (item.quantity > 1) {
+     *   item.quantity -= 1;
+     *   this.ProductsService.updateProductToBasket(item).subscribe()
+     * } else {
+     *  this.deleteProduct();
+     * }
+     */
     if (item.quantity === 1) {
       this.ProductsService.deleteProductFromBasket(item.id).subscribe(() => {
         let idx = this.basket.findIndex((data) => data.id === item.id);
@@ -33,6 +43,7 @@ export class BasketComponent implements OnInit {
     } else {
       item.quantity -= 1;
       this.ProductsService.updateProductToBasket(item).subscribe((data) => {
+        // @TODO nieuzywany parametr
       });
     }
 
@@ -41,6 +52,7 @@ export class BasketComponent implements OnInit {
   plusItemFromBasket(item: IProducts) {
     item.quantity += 1;
     this.ProductsService.updateProductToBasket(item).subscribe((data) => {
+      // @TODO nieuzywany parametr
     });
   }
 
