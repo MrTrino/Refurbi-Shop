@@ -1,0 +1,4 @@
+# @TODO plik gitkeep jest wykorzystywany, aby dodać do repozytorium git pusty katalog
+# domyślnie git śledzi tylko pliki - nie zauwazy zmiany w postaci stworzenia folderu.
+# aby zatrzymac katalog w repozytorium, dodajemy w nim plik .gitkeep
+# w tym katalogu jest juz inna zawartosc, wiec .gitkeep mozna usunac

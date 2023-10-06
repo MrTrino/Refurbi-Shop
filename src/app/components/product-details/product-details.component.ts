@@ -11,10 +11,10 @@ import { ProductsService } from './../../services/products.service';
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit {
-
+  // @TODO po co definite assignment assertion?
   product!: IProducts;
   productSubscription!: Subscription;
-
+    // @TODO formatowanie kodu
     constructor(private ProductsService: ProductsService, private route: ActivatedRoute) { }
 
     products!: IProducts[];
@@ -24,17 +24,25 @@ export class ProductDetailsComponent implements OnInit {
     basketSubscription!: Subscription;
 
   ngOnInit(): void {
+    // @TODO sprobuj async pipe zamioast jawnej subskrypcji
     this.productSubscription = this.route.data.subscribe((data) => {
       this.product = data['data'];
     });
 
-
+    // @TODO sprobuj async pipe zamioast jawnej subskrypcji
     this.basketSubscription = this.ProductsService.getProductFromBasket().subscribe((data) => {
       this.basket = data;
     });
   }
   addToBasket(product: IProducts) {
     product.quantity = 1;
+    // @TODO nie ma potrzeby pozostawienia findItem bez inicjalizacji. Logika z if / else jest troche zawila:
+    // const findItem = this.basket.find((item) => item.id === product.id);
+    // if (findItem) {
+    //   this.updateToBasket(findItem);
+    // } else {
+    //   this.postToBasket(product);
+    // }
     let findItem;
 
     if (this.basket.length > 0) {
